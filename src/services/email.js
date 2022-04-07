@@ -1,7 +1,7 @@
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 
 const serviceId = 'service_1s5sr7r'
-const templateId = 'default'
+const templateId = 'template_7am8xor'
 const userId = '0tddVW-WIOMnOHjpe'
 
 export const sendEmail = async (name, email, message) => {
