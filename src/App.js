@@ -4,10 +4,9 @@ import Canvas from "./components/Canvas/Canvas";
 import { sendEmail } from "./services/email";
 
 function App() {
+  const defaultNotification = 'We promise to never spam you.'
   const [email, setEmail] = useState();
-  const [notificationMessage, setNofiticationMessage] = useState(
-    "We promise to never spam you."
-  );
+  const [notificationMessage, setNofiticationMessage] = useState(defaultNotification);
   const [notifying, setNotifying] = useState(false);
   const emailInputRef = React.createRef();
 
@@ -48,22 +47,22 @@ function App() {
 
   const onSubmitFormHandler = (event) => {
     event.preventDefault();
+    console.log(email);
 
     sendEmail(
-      "Friendly visitor",
+      'dear visitor',
       email,
-      "Welcome to IALopezG we will notify you when our services be ready to be consumed!"
+      'Welcome to IALopezG we will notify you when our services be ready to be consumed!'
     );
 
     setNotifying(true);
     setNofiticationMessage(
-      "Message has been set. Please, check your email inbox."
+      'Message has been set. Please, check your email inbox.'
     );
     setTimeout(function () {
       setNotifying(false);
-      setNofiticationMessage("We promise to never spam you.");
-      setEmail("");
-      emailInputRef.current.focus();
+      setNofiticationMessage(defaultNotification);
+      setEmail('');
     }, 1000);
   };
 
@@ -76,7 +75,7 @@ function App() {
         height={window.innerHeight}
         options={{
           letters: charset,
-          fontSize: 14,
+          fontSize: 12,
         }}
         draw={drawMatrix}
       />

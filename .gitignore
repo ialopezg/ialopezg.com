@@ -1,7 +1,3 @@
-########################
-# DBM: Database Manager
-########################
-
 ## Jetbrains Software
 # IntelliJ IDEA
 .idea
@@ -18,3 +14,5 @@ package-lock.json
 # Composer
 /vendor/
 composer.lock
+
+build

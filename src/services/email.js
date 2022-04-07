@@ -9,7 +9,13 @@ export const sendEmail = async (name, email, message) => {
     const response = await emailjs.send(
       serviceId,
       templateId,
-      { name, email, message },
+      {
+        to_name: "dear visitor",
+        to_email: email,
+        from_name: 'IALopezG Team',
+        message,
+        reply_to: "isidro.lopezg@gmail.com",
+      },
       userId,
     )
 
