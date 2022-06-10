@@ -1,16 +1,30 @@
-## Jetbrains Software
-# IntelliJ IDEA
-.idea
+# dependencies
+node_modules/
 
-## Other files
-# Mac OSX project files
+# IDE
+/.idea
+/.awcache
+/.vscode
+/.devcontainer
+*.code-workspace
+
+# bundle
+packages/**/*.d.ts
+packages/**/*.js
+
+# misc
 .DS_Store
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+/**/npm-debug.log
+/packages/**/.npmignore
+/packages/**/LICENSE
 
-## Package Manager
-# NodeJS
-node_modules
-package-lock.json
-
-# Composer
-/vendor/
-composer.lock
+# tests
+/test
+/benchmarks/memory
+/coverage
+/.nyc_output
+/packages/graphql
+build/config\.gypi
